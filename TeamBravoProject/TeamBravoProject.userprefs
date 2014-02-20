@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyAI.js">
     <Files>
-      <File FileName="Assets\Scripts\TeleportationScript.js" Line="88" Column="53" />
-      <File FileName="Assets\Scripts\EnemyAI.js" Line="16" Column="23" />
+      <File FileName="Assets\Scripts\EnemyAI.js" Line="46" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
