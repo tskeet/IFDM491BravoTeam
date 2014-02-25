@@ -17,7 +17,7 @@ function Update () {
 		Debug.Log(Input.inputString);
 	
 	}
-
+	//if(Input.GetAxis("axis for directional pads) is positive or negative.
 	if(Input.GetKeyDown(KeyCode.UpArrow)) {
 		Debug.Log("Up arrow down.");
 	}
