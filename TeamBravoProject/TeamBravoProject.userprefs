@@ -1,11 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TeleportationScript.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Teleportation2.js">
     <Files>
-      <File FileName="Assets\Scripts\TeleportationScript.js" Line="93" Column="3" />
-      <File FileName="Assets\Scripts\Teleportation2.js" Line="20" Column="73" />
+      <File FileName="Assets\Scripts\Teleportation2.js" Line="50" Column="33" />
+      <File FileName="Assets\Scripts\Teleportation2.js" Line="56" Column="2" />
       <File FileName="Assets\Scripts\TeleportationScript.js" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
