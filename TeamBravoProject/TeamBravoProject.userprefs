@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Teleportation2.js">
     <Files>
-      <File FileName="Assets\Scripts\Teleportation2.js" Line="81" Column="25" />
+      <File FileName="Assets\Scripts\Teleportation2.js" Line="76" Column="4" />
+      <File FileName="Assets\Scripts\Teleportation2.js" Line="82" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
