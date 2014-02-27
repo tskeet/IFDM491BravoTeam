@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\EnemyAI.js" />
+     <Compile Include="Assets\Scripts\EnemyAI2.js" />
+     <Compile Include="Assets\Scripts\GunScript.js" />
      <Compile Include="Assets\Scripts\Teleportation2.js" />
      <Compile Include="Assets\Scripts\TeleportationScript.js" />
   </ItemGroup>
