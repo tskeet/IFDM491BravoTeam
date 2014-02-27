@@ -1,0 +1,22 @@
+print "Starting maya loading and fbx conversion \n";
+			
+if (`file -q -exists "F:/IFDM49~1/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/OFFICE~1.MB"`)
+{
+	file -o "F:/IFDM49~1/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/OFFICE~1.MB";
+	FBXExportEmbeddedTextures -v false;
+	// FBXExportHardEdges -v true;
+	FBXExportApplyConstantKeyReducer -v false;
+	FBXExportShowUI -v false;
+
+	print "Before fbx export\n";
+	FBXExport -f "F:/IFDM49~1/IFDM49~1/TEAMBR~1/Temp/ExportedFBXFile.fbx";
+	print "after fbx export\n";
+}
+else
+	print "Could not open Maya file.";
+
+system ("del \"F:\\IFDM49~1\\IFDM49~1\\TEAMBR~1\\Temp\\CommandPipe\"");
+
+$donepipeKill = `fopen "F:/IFDM49~1/IFDM49~1/TEAMBR~1/Temp/SyncPipeKill" "w"`;
+fwrite $donepipeKill "Done";
+fclose $donepipeKill;
