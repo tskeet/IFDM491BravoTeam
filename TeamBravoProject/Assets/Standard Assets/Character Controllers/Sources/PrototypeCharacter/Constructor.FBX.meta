@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: 449b48f7eb5d87a4baaa5fb73f875a59
 ModelImporter:
+<<<<<<< HEAD
+  serializedVersion: 15
+=======
   serializedVersion: 16
+>>>>>>> 14b84e595336e4c72a534bd487538bd7202bec9f
   fileIDToRecycleName:
     100000: Bip001 R Finger1
     100002: Bip001 R Finger21
@@ -284,5 +288,8 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 1
+<<<<<<< HEAD
+=======
   additionalBone: 0
+>>>>>>> 14b84e595336e4c72a534bd487538bd7202bec9f
   userData: 
