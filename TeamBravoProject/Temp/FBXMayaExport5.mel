@@ -1,22 +1,22 @@
 print "Starting maya loading and fbx conversion \n";
 			
-if (`file -q -exists "F:/IFDM49~1/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/OFFICE~1.MB"`)
+if (`file -q -exists "C:/Users/Whetzel.491/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/BravoRm9.mb"`)
 {
-	file -o "F:/IFDM49~1/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/OFFICE~1.MB";
+	file -o "C:/Users/Whetzel.491/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/BravoRm9.mb";
 	FBXExportEmbeddedTextures -v false;
 	// FBXExportHardEdges -v true;
 	FBXExportApplyConstantKeyReducer -v false;
 	FBXExportShowUI -v false;
 
 	print "Before fbx export\n";
-	FBXExport -f "F:/IFDM49~1/IFDM49~1/TEAMBR~1/Temp/ExportedFBXFile.fbx";
+	FBXExport -f "C:/Users/Whetzel.491/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Temp/ExportedFBXFile.fbx";
 	print "after fbx export\n";
 }
 else
 	print "Could not open Maya file.";
 
-system ("del \"F:\\IFDM49~1\\IFDM49~1\\TEAMBR~1\\Temp\\CommandPipe\"");
+system ("del \"C:\\Users\\Whetzel.491\\DOCUME~1\\GitHub\\IFDM49~1\\TEAMBR~1\\Temp\\CommandPipe\"");
 
-$donepipeKill = `fopen "F:/IFDM49~1/IFDM49~1/TEAMBR~1/Temp/SyncPipeKill" "w"`;
+$donepipeKill = `fopen "C:/Users/Whetzel.491/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Temp/SyncPipeKill" "w"`;
 fwrite $donepipeKill "Done";
 fclose $donepipeKill;
