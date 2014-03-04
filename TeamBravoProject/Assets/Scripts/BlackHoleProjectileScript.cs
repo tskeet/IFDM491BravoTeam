@@ -5,7 +5,7 @@ public class BlackHoleProjectileScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		Debug.Log ("my name is " + this.name);
 	}
 	
 	// Update is called once per frame

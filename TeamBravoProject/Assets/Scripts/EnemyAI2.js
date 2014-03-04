@@ -31,14 +31,21 @@ function Update() {
 function OnTriggerEnter (other : Collider) {
 
 	if(other.CompareTag("Player")) {
-		Debug.Log("entered my territory");
+		//Debug.Log("entered my territory");
 		chasePlayer = true;
 	}
 }
 
 function OnTiggerExit (other : Collider) {
 	if(other.CompareTag("Player")) {
-		Debug.Log("exited my territory");
+		//Debug.Log("exited my territory");
 		chasePlayer = false;
+	}
+}
+
+function OnCollisionEnter (other : Collision) {
+	if(other.gameObject.name == "Black Hole Projectile(Clone)") {
+		Debug.Log("Player shot me!");
+		Destroy(this.gameObject);
 	}
 }

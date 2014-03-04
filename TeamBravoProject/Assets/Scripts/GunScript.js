@@ -15,7 +15,7 @@ function Update () {
 	var rightTrigger = Input.GetAxis("Fire1") < -0.5;
 	
 	if((!currentTrigger) && rightTrigger) {
-		Debug.Log("left Trigger is down!  Fire!");
+		//Debug.Log("left Trigger is down!  Fire!");
 		
 		var clone : Rigidbody;
 		clone = Instantiate(projectile, transform.position, transform.rotation);
