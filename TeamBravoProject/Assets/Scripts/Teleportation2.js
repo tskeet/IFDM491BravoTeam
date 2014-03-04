@@ -5,6 +5,8 @@ var universeEastOrigin : Vector3;
 var universeWestOrigin : Vector3;
 var universeSouthOrigin : Vector3;
 var universeNorthOrigin : Vector3;
+
+
 var isDPadPressed;
 
 
