@@ -1,22 +1,22 @@
 print "Starting maya loading and fbx conversion \n";
 			
-if (`file -q -exists "C:/Users/ESTRAD~1.DEL/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/SMALLT~1.MB"`)
+if (`file -q -exists "F:/IFDM49~1/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/SECURI~3.MB"`)
 {
-	file -o "C:/Users/ESTRAD~1.DEL/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/SMALLT~1.MB";
+	file -o "F:/IFDM49~1/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/SECURI~3.MB";
 	FBXExportEmbeddedTextures -v false;
 	// FBXExportHardEdges -v true;
 	FBXExportApplyConstantKeyReducer -v false;
 	FBXExportShowUI -v false;
 
 	print "Before fbx export\n";
-	FBXExport -f "C:/Users/ESTRAD~1.DEL/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Temp/ExportedFBXFile.fbx";
+	FBXExport -f "F:/IFDM49~1/IFDM49~1/TEAMBR~1/Temp/ExportedFBXFile.fbx";
 	print "after fbx export\n";
 }
 else
 	print "Could not open Maya file.";
 
-system ("del \"C:\\Users\\ESTRAD~1.DEL\\DOCUME~1\\GitHub\\IFDM49~1\\TEAMBR~1\\Temp\\CommandPipe\"");
+system ("del \"F:\\IFDM49~1\\IFDM49~1\\TEAMBR~1\\Temp\\CommandPipe\"");
 
-$donepipeKill = `fopen "C:/Users/ESTRAD~1.DEL/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Temp/SyncPipeKill" "w"`;
+$donepipeKill = `fopen "F:/IFDM49~1/IFDM49~1/TEAMBR~1/Temp/SyncPipeKill" "w"`;
 fwrite $donepipeKill "Done";
 fclose $donepipeKill;
