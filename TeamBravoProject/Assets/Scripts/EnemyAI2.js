@@ -45,7 +45,7 @@ function OnTiggerExit (other : Collider) {
 
 function OnCollisionEnter (other : Collision) {
 	if(other.gameObject.name == "Black Hole Projectile(Clone)") {
-		Debug.Log("Player shot me!");
+		//Debug.Log("Player shot me!");
 		Destroy(this.gameObject);
 	}
 }

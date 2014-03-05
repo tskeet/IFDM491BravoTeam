@@ -6,6 +6,10 @@
 private var currentTrigger : boolean;
 public var projectile : Rigidbody;
 
+public var currentUniverse : int;
+
+public var weapon : GameObject;
+
 function Start () {
 	currentTrigger = false;
 }
@@ -23,4 +27,12 @@ function Update () {
 	}
 	
 	currentTrigger = rightTrigger;
+}
+
+function ActivateWeapon() {
+	weapon.SetActive(true);
+}
+
+function DeactivateWeapon() {
+	weapon.SetActive(false);
 }
