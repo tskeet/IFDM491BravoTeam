@@ -8,7 +8,7 @@ var rotationSpeed : float = 3f;
 
 var agent : NavMeshAgent;
 
-private var chasePlayer : boolean;
+public var chasePlayer : boolean;
 
 function Awake() {
 
@@ -16,7 +16,7 @@ function Awake() {
 }
 
 function Start() {
-	target = GameObject.FindWithTag("Player").transform;
+	//target = GameObject.FindWithTag("Player").transform;
 	agent = GetComponent.<NavMeshAgent>();
 }
 

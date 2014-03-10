@@ -10,7 +10,9 @@ public class BlackHoleProjectileScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if ((transform.position.y < 0) || (transform.position.y > 10)) {
+			Destroy (this.gameObject);
+		}
 	}
 
 	void OnCollisionEnter(Collision collision) {

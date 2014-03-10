@@ -14,7 +14,7 @@ function Start () {
 function Update () {
 
 	if(Input.GetButtonDown("X_Button") && nearBox) {
-		Debug.Log("x button was pressed");
+		//Debug.Log("x button was pressed");
 		if(inBox) {
 			// take weapon out of box and change weapon's current Universe
 			weapon.currentUniverse = player.currentUniverse;
