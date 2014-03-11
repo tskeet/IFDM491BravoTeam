@@ -1,38 +1,22 @@
 print "Starting maya loading and fbx conversion \n";
 			
-<<<<<<< HEAD
-if (`file -q -exists "F:/Hartung/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/SECURI~3.MB"`)
+if (`file -q -exists "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/WALLPA~1.MB"`)
 {
-	file -o "F:/Hartung/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/SECURI~3.MB";
-=======
-if (`file -q -exists "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/BravoRm7.mb"`)
-{
-	file -o "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/BravoRm7.mb";
->>>>>>> 372c9d3309910868c12d30ca0f0e3bbb3c9cc0c3
+	file -o "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/WALLPA~1.MB";
 	FBXExportEmbeddedTextures -v false;
 	// FBXExportHardEdges -v true;
 	FBXExportApplyConstantKeyReducer -v false;
 	FBXExportShowUI -v false;
 
 	print "Before fbx export\n";
-<<<<<<< HEAD
-	FBXExport -f "F:/Hartung/IFDM49~1/TEAMBR~1/Temp/ExportedFBXFile.fbx";
-=======
 	FBXExport -f "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Temp/ExportedFBXFile.fbx";
->>>>>>> 372c9d3309910868c12d30ca0f0e3bbb3c9cc0c3
 	print "after fbx export\n";
 }
 else
 	print "Could not open Maya file.";
 
-<<<<<<< HEAD
-system ("del \"F:\\Hartung\\IFDM49~1\\TEAMBR~1\\Temp\\CommandPipe\"");
-
-$donepipeKill = `fopen "F:/Hartung/IFDM49~1/TEAMBR~1/Temp/SyncPipeKill" "w"`;
-=======
 system ("del \"C:\\Users\\J-SQUA~1\\DOCUME~1\\GitHub\\IFDM49~1\\TEAMBR~1\\Temp\\CommandPipe\"");
 
 $donepipeKill = `fopen "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Temp/SyncPipeKill" "w"`;
->>>>>>> 372c9d3309910868c12d30ca0f0e3bbb3c9cc0c3
 fwrite $donepipeKill "Done";
 fclose $donepipeKill;
