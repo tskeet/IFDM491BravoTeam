@@ -23,7 +23,7 @@ function Update () {
 function OnTriggerEnter(other : Collider) {
 	//Debug.Log("collided with box");
 	if(other.CompareTag("Player")) {
-		anotification = Instantiate(new GameObject(), new Vector3(0.5, 0.5, 0.5), Quaternion.identity);
+		anotification = new GameObject();
 		anotification.AddComponent(GUIText);
 		if(boxController.inBox) {
 			anotification.guiText.text = "Press X to take weapon out of box";
