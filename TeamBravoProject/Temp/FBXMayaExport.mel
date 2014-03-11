@@ -1,21 +1,13 @@
 while (1)
 {	
-<<<<<<< HEAD
 	if (`filetest -r "F:/Hartung/IFDM49~1/TEAMBR~1/Temp/CommandPipe"`)
-=======
-	if (`filetest -r "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Temp/CommandPipe"`)
->>>>>>> 372c9d3309910868c12d30ca0f0e3bbb3c9cc0c3
 	{
 		$exportNormals = 0;
 		$exportTangents = 0;
 		$bakeCommand = "";
 	
 		// Parse settings
-<<<<<<< HEAD
 		$waitpipe = `fopen "F:/Hartung/IFDM49~1/TEAMBR~1/Temp/CommandPipe" "r"`;
-=======
-		$waitpipe = `fopen "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Temp/CommandPipe" "r"`;
->>>>>>> 372c9d3309910868c12d30ca0f0e3bbb3c9cc0c3
 		$filename = `fgetline $waitpipe`;
 		
 		for ($i = 0; $i < 3; ++$i) 
@@ -144,26 +136,16 @@ while (1)
 				FBXExportShowUI -v false;
 
 				print "Before fbx export\n";
-<<<<<<< HEAD
 				FBXExport -f "F:/Hartung/IFDM49~1/TEAMBR~1/Temp/ExportedFBXFile.fbx";
-=======
-				FBXExport -f "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Temp/ExportedFBXFile.fbx";
->>>>>>> 372c9d3309910868c12d30ca0f0e3bbb3c9cc0c3
 				print "after fbx export\n";
 			}
 			else
 				print "Could not open Maya file.";
 
 			// TODO: We should use sysFile, so we don't have to have two separate mel scripts for OSX/Windows
-<<<<<<< HEAD
 			system ("del \"F:\\Hartung\\IFDM49~1\\TEAMBR~1\\Temp\\CommandPipe\"");
 
 			$donepipe = `fopen "F:/Hartung/IFDM49~1/TEAMBR~1/Temp/SyncPipe" "w"`;
-=======
-			system ("del \"C:\\Users\\J-SQUA~1\\DOCUME~1\\GitHub\\IFDM49~1\\TEAMBR~1\\Temp\\CommandPipe\"");
-
-			$donepipe = `fopen "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Temp/SyncPipe" "w"`;
->>>>>>> 372c9d3309910868c12d30ca0f0e3bbb3c9cc0c3
 			fwrite $donepipe "Done";
 			fclose $donepipe;
 			print "Finished maya loading and fbx conversion \n";
