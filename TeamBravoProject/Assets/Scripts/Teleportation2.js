@@ -12,7 +12,7 @@ var universeNorthOrigin : Vector3;
 var isDPadPressed;
 
 //These variables are used for the weapon.
-public var weapon : GunScript;
+public var weapon : WeaponScript;
 
 //var weapon : GameObject;
 public var currentUniverse : int; //an int to signify the current universe the player is in.

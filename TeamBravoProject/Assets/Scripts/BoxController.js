@@ -3,7 +3,7 @@
 public var nearBox : boolean;
 public var inBox : boolean;
 public var player : Teleportation2;
-public var weapon : GunScript;
+public var weapon : WeaponScript;
 public var currentBox : BoxScript;
 
 function Start () {
