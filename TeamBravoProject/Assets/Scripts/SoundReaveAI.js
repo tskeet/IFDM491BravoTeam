@@ -5,6 +5,8 @@ public var target : Transform;
 private var timer : int;
 private var currentState : SoundReaveState;
 
+public var localObjects : GameObject[];
+
 enum SoundReaveState{EchoLocate, EchoFound, Attack, Wander};
 
 function Start () {
