@@ -33,21 +33,28 @@ function Update() {
 }*/
 
 var target : Transform;
-var moveSpeed : float = 3f;
+var moveSpeed : float = 10f;
 var rotationSpeed : float = 3f;
 
 var myTransform : Transform;
 
+var agent : NavMeshAgent;
+
 function Awake() {
-	myTransform = transform;
+	//Transform = transform;
 }
 
 function Start() {
 	target = GameObject.FindWithTag("Player").transform;
+	agent = GetComponent.<NavMeshAgent>();
 }
 
 function Update() {
-	myTransform.rotation = Quaternion.Slerp(myTransform.rotation, Quaternion.LookRotation(target.position - myTransform.position), rotationSpeed*Time.deltaTime);
+	//Transform.rotation = Quaternion.Slerp(myTransform.rotation, Quaternion.LookRotation(target.position - myTransform.position), rotationSpeed*Time.deltaTime);
 	
-	myTransform.position += myTransform.forward * moveSpeed * Time.deltaTime;
+	//Transform.position += myTransform.forward * moveSpeed * Time.deltaTime;
+	//transform.LookAt(target);
+	//rigidbody.AddForce(Vector3.forward * moveSpeed);
+	
+	agent.SetDestination(GameObject.FindWithTag("Player").transform.position);
 }

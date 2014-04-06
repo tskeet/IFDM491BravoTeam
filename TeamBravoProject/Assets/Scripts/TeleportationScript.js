@@ -53,7 +53,7 @@ function Update () {
 	
 	if(Input.GetKeyUp(KeyCode.LeftControl)) {
 	
-		var oldx = player.position.x;
+/**		var oldx = player.position.x;
 		var oldz = player.position.z;
 		var relativex;
 		var relativez;
@@ -87,6 +87,10 @@ function Update () {
 		} else {
 			player.position = new Vector3((relativex + 50), 2, (relativez - 50));
 		}
+		
+*/
+		var nextUniverse = currentDimension + 1;
+		
 	}
 }
 
