@@ -27,7 +27,7 @@ function Update () {
 	var rightTrigger = Input.GetAxis("Fire1") < -0.5;
 	
 	if((!currentTrigger) && rightTrigger) {
-		Debug.Log("left Trigger is down!  Fire!");
+		//Debug.Log("left Trigger is down!  Fire!");
 		
 		/**var clone : Rigidbody;
 		clone = Instantiate(projectile, transform.position, transform.rotation);
@@ -36,7 +36,7 @@ function Update () {
 		var ray : Ray = lookcamera.ScreenPointToRay(Vector3 ((lookcamera.pixelWidth / 2), (lookcamera.pixelHeight / 2), 0));
 		
 		if(Physics.Raycast(ray, hit)) {
-			Debug.Log("Hit!  I hit something! " + hit.collider.gameObject.tag);
+			//Debug.Log("Hit!  I hit something! " + hit.collider.gameObject.tag);
 			//Debug.DrawRay(lookcamera.transform.position, ray.direction, Color.blue, 1.0);
 			if(hit.collider.gameObject.tag == "Enemy") {
 				Destroy(hit.collider.gameObject);
