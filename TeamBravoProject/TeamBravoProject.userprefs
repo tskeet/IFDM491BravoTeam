@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SoundReaveAI.js">
     <Files>
-      <File FileName="Assets\Scripts\EchoLocatable.js" Line="8" Column="2" />
+      <File FileName="Assets\Scripts\SoundReaveAI.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EchoLocatable.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SoundReaveAI.js" Line="34" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
