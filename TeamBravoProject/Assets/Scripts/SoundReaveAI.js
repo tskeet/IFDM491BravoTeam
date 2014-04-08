@@ -37,7 +37,7 @@ function Update () {
 }
 
 function EchoLocationFunction() {
-	Debug.Log("inside EchoLocation Fuction");
+	//Debug.Log("inside EchoLocation Fuction");
 	//getting vector between the Sound Reave and the Player's position.
 	var heading = target.position - transform.position;
 	
@@ -73,8 +73,12 @@ function WanderFunction() {
 
 function OnTriggerEnter(other : Collider) {
 	if(other.gameObject.tag == "LastKnownPosition") {
-		Debug.Log("collied with last known position");
+		//Debug.Log("collied with last known position");
 		GameObject.Destroy(lastKnownPosition);
 		currentState = SoundReaveState.EchoLocate;
 	}
+}
+
+function OnCollisionEnter(collision : Collision) {
+
 }

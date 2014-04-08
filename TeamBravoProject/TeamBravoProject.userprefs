@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SoundReaveAI.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\WeaponScript.js">
     <Files>
-      <File FileName="Assets\Scripts\SoundReaveAI.js" Line="76" Column="49" />
+      <File FileName="Assets\Scripts\SoundReaveAI.js" Line="40" Column="4" />
+      <File FileName="Assets\Scripts\WeaponScript.js" Line="40" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
