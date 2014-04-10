@@ -35,7 +35,7 @@ function Update () {
 		clone.velocity = transform.TransformDirection(Vector3.forward * 50); */
 		var hit : RaycastHit;
 		var ray : Ray = lookcamera.ScreenPointToRay(Vector3((lookcamera.pixelWidth / 2), (lookcamera.pixelHeight / 2), 0));
-		Debug.DrawRay(ray.origin, ray.direction*1000, Color.white, 5.0);
+		//Debug.DrawRay(ray.origin, ray.direction*1000, Color.white, 5.0);
 		
 		if(Physics.Raycast(ray, hit)) {
 			Debug.Log("Hit!  I hit something! " + hit.collider.gameObject.name);

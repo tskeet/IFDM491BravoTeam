@@ -3,7 +3,7 @@
 
 private var currentState : MBReaveState;
 
-enum MBReaveState(Wander, Alarm, Attack);
+enum MBReaveState{Wander, Alarm, Attack};
 function Start () {
 	currentState = MBReaveState.Wander;
 }
@@ -15,5 +15,19 @@ function Update () {
 		this.Alarm();
 	} else if(currentState == MBReaveState.Attack) {
 		this.Attack();
+	} else {
+	
 	}
+}
+
+function Wander() {
+
+}
+
+function Alarm() {
+
+}
+
+function Attack() {
+
 }
