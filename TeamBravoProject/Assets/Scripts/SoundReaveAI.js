@@ -15,7 +15,7 @@ enum SoundReaveState{EchoLocate, EchoFound, Attack, Wander};
 function Start () {
 	timer = 70;
 	//Debug.Log("DeltaTime is " + Time.deltaTime);
-	currentState = SoundReaveState.EchoLocate;
+	currentState = SoundReaveState.Wander;
 }
 
 function Update () {
@@ -37,7 +37,7 @@ function Update () {
 }
 
 function EchoLocationFunction() {
-	//Debug.Log("inside EchoLocation Fuction");
+	Debug.Log("inside EchoLocation Fuction");
 	//getting vector between the Sound Reave and the Player's position.
 	var heading = target.position - transform.position;
 	
@@ -55,6 +55,8 @@ function EchoLocationFunction() {
 			}
 			lastKnownPosition = GameObject.Instantiate(lastKnownPositionObject, hitObject.transform.position, hitObject.transform.rotation);
 			currentState = SoundReaveState.EchoFound;
+		} else {
+			currentState = SoundReaveState.Wander;
 		}
 	}
 }
@@ -68,7 +70,9 @@ function AttackFunction() {
 }
 
 function WanderFunction() {
-
+	Debug.Log("in Wander Function");
+	agent.Move(new Vector3(Random.value, Random.value, Random.value));
+	currentState = SoundReaveState.EchoLocate;
 }
 
 function OnTriggerEnter(other : Collider) {
