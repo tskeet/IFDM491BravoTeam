@@ -34,14 +34,11 @@ function Update () {
 		clone = Instantiate(projectile, transform.position, transform.rotation);
 		clone.velocity = transform.TransformDirection(Vector3.forward * 50); */
 		var hit : RaycastHit;
-		var ray : Ray = lookcamera.ScreenPointToRay(Vector3 ((lookcamera.pixelWidth / 2), (lookcamera.pixelHeight / 2), 0));
+		var ray : Ray = lookcamera.ScreenPointToRay(Vector3((lookcamera.pixelWidth / 2), (lookcamera.pixelHeight / 2), 0));
+		Debug.DrawRay(ray.origin, ray.direction*1000, Color.white, 5.0);
 		
-<<<<<<< HEAD
-		if(Physics.Raycast(ray, hit, 100)) {
-=======
-		if(Physics.Raycast(ray, hit, 1000)) {
->>>>>>> eebd2fd60f6e7424512b0a32dfb6628a6b1f6fdf
-			Debug.Log("Hit!  I hit something! " + hit.collider.gameObject.tag);
+		if(Physics.Raycast(ray, hit)) {
+			Debug.Log("Hit!  I hit something! " + hit.collider.gameObject.name);
 			//Debug.DrawRay(lookcamera.transform.position, ray.direction, Color.blue, 1.0);
 			if(hit.collider.CompareTag("Enemy")) {
 				//Debug.Log("hit enemy");
