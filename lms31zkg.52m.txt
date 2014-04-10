@@ -1,0 +1,63 @@
+﻿Merge branch 'master' of https://github.com/tskeet/IFDM491BravoTeam
+
+Conflicts:
+	TeamBravoProject/Library/AssetServerCacheV3
+	TeamBravoProject/Library/CurrentLayout.dwlt
+	TeamBravoProject/Library/CurrentMaximizeLayout.dwlt
+	TeamBravoProject/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+	TeamBravoProject/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll.mdb
+	TeamBravoProject/Library/ScriptAssemblies/Assembly-CSharp.dll
+	TeamBravoProject/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+	TeamBravoProject/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll
+	TeamBravoProject/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll.mdb
+	TeamBravoProject/Library/ScriptAssemblies/Assembly-UnityScript.dll
+	TeamBravoProject/Library/ScriptAssemblies/Assembly-UnityScript.dll.mdb
+	TeamBravoProject/Library/assetDatabase3
+	TeamBravoProject/Library/guidmapper
+	TeamBravoProject/Library/metadata/44/449b48f7eb5d87a4baaa5fb73f875a59
+	TeamBravoProject/Library/metadata/46/465844740b5921845a3e067f6f8abd8a
+	TeamBravoProject/Library/metadata/a8/a89d154a75b24ca45b933b853f06b4b8
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 5 and 9 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#   (use "git commit" to conclude merge)
+#
+# Changes to be committed:
+#
+#	modified:   TeamBravoProject/Assembly-UnityScript-vs.unityproj
+#	modified:   TeamBravoProject/Assembly-UnityScript.unityproj
+#	new file:   TeamBravoProject/Assets/3D Models/gunDesign2.mb
+#	new file:   TeamBravoProject/Assets/Materials/Floor Physics Material.physicMaterial
+#	new file:   TeamBravoProject/Assets/Materials/Floor Physics Material.physicMaterial.meta
+#	new file:   TeamBravoProject/Assets/MultiBrainReaveScene.unity
+#	new file:   TeamBravoProject/Assets/MultiBrainReaveScene.unity.meta
+#	modified:   TeamBravoProject/Assets/Objects/Capsularity Black.prefab
+#	modified:   TeamBravoProject/Assets/Objects/LastKnownLocationObject.prefab
+#	new file:   TeamBravoProject/Assets/Scripts/MultiBrainReave.js
+#	new file:   TeamBravoProject/Assets/Scripts/MultiBrainReave.js.meta
+#	modified:   TeamBravoProject/Assets/Scripts/SoundReaveAI.js
+#	modified:   TeamBravoProject/Assets/Scripts/WeaponScript.js
+#	modified:   TeamBravoProject/Assets/SoundReaveScene.unity
+#	modified:   TeamBravoProject/Assets/SoundReaveScene/NavMesh.asset
+#	modified:   TeamBravoProject/Library/InspectorExpandedItems.asset
+#	new file:   TeamBravoProject/Library/metadata/5e/5e5b39bb2cb92834d82172bc289def1e
+#	new file:   TeamBravoProject/Library/metadata/ce/ce50e0c54378d104db08a5720aeb07e9
+#	new file:   TeamBravoProject/Library/metadata/e2/e25bc0a42edeff549b5a3b66e52599a1
+#	modified:   TeamBravoProject/ProjectSettings/TagManager.asset
+#	modified:   TeamBravoProject/TeamBravoProject-csharp.sln
+#	modified:   TeamBravoProject/TeamBravoProject.sln
+#	modified:   TeamBravoProject/TeamBravoProject.userprefs
+#
+

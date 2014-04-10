@@ -15,7 +15,8 @@ enum SoundReaveState{EchoLocate, EchoFound, Attack, Wander};
 function Start () {
 	timer = 70;
 	//Debug.Log("DeltaTime is " + Time.deltaTime);
-	currentState = SoundReaveState.EchoLocate;
+	agent = GetComponent.<NavMeshAgent>();
+	currentState = SoundReaveState.Wander;
 }
 
 function Update () {
@@ -37,7 +38,7 @@ function Update () {
 }
 
 function EchoLocationFunction() {
-	//Debug.Log("inside EchoLocation Fuction");
+	Debug.Log("inside EchoLocation Fuction");
 	//getting vector between the Sound Reave and the Player's position.
 	var heading = target.position - transform.position;
 	
@@ -53,8 +54,11 @@ function EchoLocationFunction() {
 			if(lastKnownPosition != null) {
 				GameObject.Destroy(lastKnownPosition);
 			}
+			
 			lastKnownPosition = GameObject.Instantiate(lastKnownPositionObject, hitObject.transform.position, hitObject.transform.rotation);
 			currentState = SoundReaveState.EchoFound;
+		} else {
+			currentState = SoundReaveState.Wander;
 		}
 	}
 }
@@ -68,7 +72,12 @@ function AttackFunction() {
 }
 
 function WanderFunction() {
-
+	Debug.Log("in Wander Function");
+	//agent.Move(new Vector3(Random.value, Random.value, Random.value));
+	var randomVector = Random.onUnitSphere;
+	randomVector.y = 0.0;
+	agent.SetDestination(agent.gameObject.transform.position + randomVector);
+	currentState = SoundReaveState.EchoLocate;
 }
 
 function OnTriggerEnter(other : Collider) {
@@ -79,6 +88,10 @@ function OnTriggerEnter(other : Collider) {
 	}
 }
 
-function OnCollisionEnter(collision : Collision) {
-
+function OnCollisionEnter(other : Collision) {
+	if(other.gameObject.tag == "LastKnownPosition") {
+		Debug.Log("collided with Last Known Position.");
+		GameObject.Destroy(lastKnownPosition);
+		currentState = SoundReaveState.EchoLocate;
+	}
 }
