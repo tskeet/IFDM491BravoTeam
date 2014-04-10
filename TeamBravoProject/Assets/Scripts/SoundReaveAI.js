@@ -73,7 +73,10 @@ function AttackFunction() {
 
 function WanderFunction() {
 	Debug.Log("in Wander Function");
-	agent.Move(new Vector3(Random.value, Random.value, Random.value));
+	//agent.Move(new Vector3(Random.value, Random.value, Random.value));
+	var randomVector = Random.onUnitSphere;
+	randomVector.y = 0.0;
+	agent.SetDestination(agent.gameObject.transform.position + randomVector);
 	currentState = SoundReaveState.EchoLocate;
 }
 
