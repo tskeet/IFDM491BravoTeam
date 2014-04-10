@@ -36,10 +36,14 @@ function Update () {
 		var hit : RaycastHit;
 		var ray : Ray = lookcamera.ScreenPointToRay(Vector3 ((lookcamera.pixelWidth / 2), (lookcamera.pixelHeight / 2), 0));
 		
+<<<<<<< HEAD
 		if(Physics.Raycast(ray, hit, 100)) {
+=======
+		if(Physics.Raycast(ray, hit, 1000)) {
+>>>>>>> eebd2fd60f6e7424512b0a32dfb6628a6b1f6fdf
 			Debug.Log("Hit!  I hit something! " + hit.collider.gameObject.tag);
 			//Debug.DrawRay(lookcamera.transform.position, ray.direction, Color.blue, 1.0);
-			if(hit.collider.gameObject.tag == "Enemy") {
+			if(hit.collider.CompareTag("Enemy")) {
 				//Debug.Log("hit enemy");
 				Destroy(hit.collider.gameObject);
 			}
