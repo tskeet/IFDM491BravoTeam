@@ -16,8 +16,11 @@ public var reticleTexture : Texture2D;
 public var position : Rect;
 static var OriginalOn  = true;
 
+public var gunAnimation : Animation;
+
 function Start () {
 	currentTrigger = false;
+	
 }
 
 function Update () {
