@@ -73,7 +73,7 @@ function AttackFunction() {
 }
 
 function WanderFunction() {
-	Debug.Log("in Wander Function");
+	//Debug.Log("in Wander Function");
 	//agent.Move(new Vector3(Random.value, Random.value, Random.value));
 	var randomVector = Random.insideUnitCircle * 5;
 	//Debug.Log("randomVector = " + randomVector);
