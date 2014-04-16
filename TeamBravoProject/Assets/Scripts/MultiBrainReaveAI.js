@@ -1,5 +1,7 @@
 ﻿#pragma strict
 
+public var player : HealthScript;
+
 private var agent : NavMeshAgent;
 private var notifyPosition : Vector3;
 private var currentState : MBReaveState;
@@ -15,11 +17,11 @@ function Start () {
 function Update () {
 	if(timer <= 0) {
 		if(currentState == MBReaveState.Wander) {
-			this.Wander();
+			this.WanderFunction();
 		} else if(currentState == MBReaveState.Alarm) {
-			this.Alarm();
+			this.AlarmFunction();
 		} else if(currentState == MBReaveState.Attack) {
-			this.Attack();
+			this.AttackFunction();
 		} else {
 	
 		}
@@ -29,7 +31,7 @@ function Update () {
 	}
 }
 
-function Wander() {
+function WanderFunction() {
 	//Debug.Log("in Wander Function");
 	//agent.Move(new Vector3(Random.value, Random.value, Random.value));
 	var randomVector = Random.insideUnitCircle * 5;
@@ -39,13 +41,13 @@ function Wander() {
 	agent.SetDestination((new Vector3(randomVector.x, 0.0, randomVector.y)) + agent.transform.position);
 }
 
-function Alarm() {
+function AlarmFunction() {
 	agent.speed = 25.0;
 	agent.SetDestination(notifyPosition);
 
 }
 
-function Attack() {
+function AttackFunction() {
 	
 }
 
