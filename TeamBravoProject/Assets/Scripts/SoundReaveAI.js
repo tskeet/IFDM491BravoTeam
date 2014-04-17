@@ -64,6 +64,7 @@ function EchoLocationFunction() {
 }
 
 function EchoFoundFunction() {
+	agent.speed = 25.0;
 	agent.SetDestination(lastKnownPosition.transform.position);
 }
 
@@ -72,11 +73,13 @@ function AttackFunction() {
 }
 
 function WanderFunction() {
-	Debug.Log("in Wander Function");
+	//Debug.Log("in Wander Function");
 	//agent.Move(new Vector3(Random.value, Random.value, Random.value));
-	var randomVector = Random.onUnitSphere;
-	randomVector.y = 0.0;
-	agent.SetDestination(agent.gameObject.transform.position + randomVector);
+	var randomVector = Random.insideUnitCircle * 5;
+	//Debug.Log("randomVector = " + randomVector);
+	//randomVector.y = 0.0;
+	agent.speed = 5.0;
+	agent.SetDestination((new Vector3(randomVector.x, 0.0, randomVector.y)) + agent.transform.position);
 	currentState = SoundReaveState.EchoLocate;
 }
 
@@ -84,14 +87,15 @@ function OnTriggerEnter(other : Collider) {
 	if(other.gameObject.tag == "LastKnownPosition") {
 		//Debug.Log("collied with last known position");
 		GameObject.Destroy(lastKnownPosition);
+		agent.Stop(true);
 		currentState = SoundReaveState.EchoLocate;
 	}
 }
 
-function OnCollisionEnter(other : Collision) {
+/**function OnCollisionEnter(other : Collision) {
 	if(other.gameObject.tag == "LastKnownPosition") {
 		Debug.Log("collided with Last Known Position.");
 		GameObject.Destroy(lastKnownPosition);
 		currentState = SoundReaveState.EchoLocate;
 	}
-}
+}*/
