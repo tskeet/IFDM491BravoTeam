@@ -1,6 +1,7 @@
 ﻿#pragma strict
 
 public var health : float = 100.0;
+public var position : Vector2;
 
 function Start () {
 
