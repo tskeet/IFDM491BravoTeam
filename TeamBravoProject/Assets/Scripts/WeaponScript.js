@@ -16,6 +16,7 @@ public var reticleTexture : Texture2D;
 public var position : Rect;
 static var OriginalOn  = true;
 
+
 function Start () {
 	currentTrigger = false;
 }
