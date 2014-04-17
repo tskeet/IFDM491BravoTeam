@@ -52,7 +52,9 @@ Assets/Scripts/EnemyAI.js
 Assets/Scripts/EnemyAI2.js
 Assets/Scripts/GunScript.js
 Assets/Scripts/HealthScript.js
-Assets/Scripts/MultiBrainReave.js
+Assets/Scripts/MultiBrainReaveAI.js
+Assets/Scripts/NeuronBranchScript.js
+Assets/Scripts/ScentReaveAI.js
 Assets/Scripts/SoundReaveAI.js
 Assets/Scripts/Teleportation2.js
 Assets/Scripts/TeleportationScript.js

@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 19ab21e41f6bb084bb2c1f9f8397f6df
-=======
-guid: 1d5c7aca65d3dd346aea3bd8cc0db4bc
->>>>>>> e816a5ed37e6cd6a52922756aada166d4ba9b7c3
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -19,15 +15,16 @@ ModelImporter:
     3300002: polySurface2
     4300000: polySurface1
     4300002: polySurface2
-    7400000: Take 001
+    7400000: Gun Spinning
     9500000: //RootNode
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
-    bakeSimulation: 0
+    bakeSimulation: 1
     optimizeGameObjects: 0
     animationCompression: 1
     animationRotationError: .5
@@ -35,15 +32,43 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Gun Spinning
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: polySurface1
+        weight: 1
+      - path: polySurface2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-<<<<<<< HEAD
-    globalScale: .129999995
-=======
-    globalScale: 1
->>>>>>> e816a5ed37e6cd6a52922756aada166d4ba9b7c3
+    globalScale: .0189999994
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -75,6 +100,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
