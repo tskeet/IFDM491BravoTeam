@@ -1,8 +1,8 @@
 print "Starting maya loading and fbx conversion \n";
 			
-if (`file -q -exists "G:/Hartung/IFDM49~1/TEAMBR~1/Assets/GUN_AN~2.MB"`)
+if (`file -q -exists "G:/Hartung/IFDM49~1/TEAMBR~1/Assets/GUN_AN~1.MA"`)
 {
-	file -o "G:/Hartung/IFDM49~1/TEAMBR~1/Assets/GUN_AN~2.MB";
+	file -o "G:/Hartung/IFDM49~1/TEAMBR~1/Assets/GUN_AN~1.MA";
 	FBXExportEmbeddedTextures -v false;
 	// FBXExportHardEdges -v true;
 	FBXExportApplyConstantKeyReducer -v false;
