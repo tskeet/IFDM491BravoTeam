@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 993156d20cef7664c8a778cd0886cdf9
+guid: 88eba2c656f7f4040bf13b696f6ecb20
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube
-    7400000: Take 001
+    7400000: Default Take
     9500000: //RootNode
   materials:
     importMaterials: 1
