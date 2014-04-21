@@ -49,7 +49,7 @@ function Update () {
 				Destroy(hit.collider.gameObject);
 			}
 		}
-		gunAnimation.Play("Regular Spin");
+		//gunAnimation.Play("Regular Spin");
 	}
 	
 	currentTrigger = rightTrigger;
