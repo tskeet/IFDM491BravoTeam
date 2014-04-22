@@ -8,9 +8,11 @@ public var agent : NavMeshAgent;
 private var timer : int;
 public var currentState : SoundReaveState;
 
-public var localObjects : GameObject[];
+public var playerHealth : HealthScript;
 
-enum SoundReaveState{EchoLocate, EchoFound, Attack, Wander};
+//public var localObjects : GameObject[];
+
+enum SoundReaveState{EchoLocate, EchoFound, Attack, Wander, Stun};
 
 function Start () {
 	timer = 70;
@@ -89,13 +91,8 @@ function OnTriggerEnter(other : Collider) {
 		GameObject.Destroy(lastKnownPosition);
 		agent.Stop(true);
 		currentState = SoundReaveState.EchoLocate;
+	} else if(other.gameObject.tag == "Player") {
+		Debug.Log("damaging the player.");
+		playerHealth.DamagePlayer(10.0);
 	}
 }
-
-/**function OnCollisionEnter(other : Collision) {
-	if(other.gameObject.tag == "LastKnownPosition") {
-		Debug.Log("collided with Last Known Position.");
-		GameObject.Destroy(lastKnownPosition);
-		currentState = SoundReaveState.EchoLocate;
-	}
-}*/
