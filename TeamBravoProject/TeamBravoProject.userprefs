@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ScentReaveAI.js">
     <Files>
-      <File FileName="Assets\Scripts\SoundReaveAI.js" Line="15" Column="65" />
-      <File FileName="Assets\Scripts\ScentReaveAI.js" Line="9" Column="35" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" Line="13" Column="40" />
+      <File FileName="Assets\Scripts\ScentReaveAI.js" Line="53" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
