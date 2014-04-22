@@ -5,6 +5,8 @@ Project("{5847C019-F10E-36E1-65F1-BE86CFF7EF2C}") = "TeamBravoProject", "Assembl
 EndProject
 Project("{5847C019-F10E-36E1-65F1-BE86CFF7EF2C}") = "TeamBravoProject", "Assembly-CSharp-vs.csproj", "{DB07FA94-8658-E7AF-0A3F-EEEC7505895A}"
 EndProject
+Project("{5847C019-F10E-36E1-65F1-BE86CFF7EF2C}") = "TeamBravoProject", "Assembly-CSharp-Editor-vs.csproj", "{172FBA44-A99E-E711-BF25-9CA734F1CDE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,16 @@ Global
 		{DB07FA94-8658-E7AF-0A3F-EEEC7505895A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB07FA94-8658-E7AF-0A3F-EEEC7505895A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB07FA94-8658-E7AF-0A3F-EEEC7505895A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{172FBA44-A99E-E711-BF25-9CA734F1CDE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{172FBA44-A99E-E711-BF25-9CA734F1CDE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{172FBA44-A99E-E711-BF25-9CA734F1CDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{172FBA44-A99E-E711-BF25-9CA734F1CDE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 																																																																																																																GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																			GlobalSection(MonoDevelopProperties) = preSolution
 																																																																																																															GlobalSection(MonoDevelopProperties) = preSolution
 																																																																																																												GlobalSection(MonoDevelopProperties) = preSolution
 																																																																																																														GlobalSection(MonoDevelopProperties) = preSolution
