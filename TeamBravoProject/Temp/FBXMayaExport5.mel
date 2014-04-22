@@ -1,8 +1,8 @@
 print "Starting maya loading and fbx conversion \n";
 			
-if (`file -q -exists "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/GUN_AN~2.MB"`)
+if (`file -q -exists "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/LABEQU~4.MB"`)
 {
-	file -o "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/GUN_AN~2.MB";
+	file -o "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/LABEQU~4.MB";
 	FBXExportEmbeddedTextures -v false;
 	// FBXExportHardEdges -v true;
 	FBXExportApplyConstantKeyReducer -v false;
