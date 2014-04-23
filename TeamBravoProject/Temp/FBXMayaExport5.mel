@@ -1,38 +1,22 @@
 print "Starting maya loading and fbx conversion \n";
 			
-<<<<<<< HEAD
 if (`file -q -exists "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/FLORES~1.MB"`)
 {
 	file -o "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Assets/3DMODE~1/FLORES~1.MB";
-=======
-if (`file -q -exists "G:/Hartung/IFDM49~1/TEAMBR~1/Assets/BR5219~1.MB"`)
-{
-	file -o "G:/Hartung/IFDM49~1/TEAMBR~1/Assets/BR5219~1.MB";
->>>>>>> 5af9512f90b948230392d0cc57633ec910232a65
 	FBXExportEmbeddedTextures -v false;
 	// FBXExportHardEdges -v true;
 	FBXExportApplyConstantKeyReducer -v false;
 	FBXExportShowUI -v false;
 
 	print "Before fbx export\n";
-<<<<<<< HEAD
 	FBXExport -f "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Temp/ExportedFBXFile.fbx";
-=======
-	FBXExport -f "G:/Hartung/IFDM49~1/TEAMBR~1/Temp/ExportedFBXFile.fbx";
->>>>>>> 5af9512f90b948230392d0cc57633ec910232a65
 	print "after fbx export\n";
 }
 else
 	print "Could not open Maya file.";
 
-<<<<<<< HEAD
 system ("del \"C:\\Users\\J-SQUA~1\\DOCUME~1\\GitHub\\IFDM49~1\\TEAMBR~1\\Temp\\CommandPipe\"");
 
 $donepipeKill = `fopen "C:/Users/J-SQUA~1/DOCUME~1/GitHub/IFDM49~1/TEAMBR~1/Temp/SyncPipeKill" "w"`;
-=======
-system ("del \"G:\\Hartung\\IFDM49~1\\TEAMBR~1\\Temp\\CommandPipe\"");
-
-$donepipeKill = `fopen "G:/Hartung/IFDM49~1/TEAMBR~1/Temp/SyncPipeKill" "w"`;
->>>>>>> 5af9512f90b948230392d0cc57633ec910232a65
 fwrite $donepipeKill "Done";
 fclose $donepipeKill;
