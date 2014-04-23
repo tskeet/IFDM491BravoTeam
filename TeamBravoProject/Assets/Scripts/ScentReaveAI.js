@@ -6,11 +6,11 @@ private var timer : int;
 private var currentState : ScentReaveState;
 private var previousPlayerLocation : Vector3;
 
-private var scentTrail : ScentNode[];
+//private var scentTrail : ScentNode[];
 
 enum ScentReaveState {Follow, Wander, Attack};
 function Start () {
-	scentTrail = new Array();
+	//scentTrail = new Array();
 }
 
 function Update () {
