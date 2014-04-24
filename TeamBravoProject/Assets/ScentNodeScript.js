@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 public var index : int;
-public var scentReave : ScentReaveScript;
+public var scentReave : ScentReaveAI;
 
 function Start () {
 
@@ -20,5 +20,5 @@ function GetIndex() {
 }
 
 function OnTriggerEnter(other : Collider) {
-	scentReave.SetNextIndex(index);	
+	//scentReave.SetNextIndex(index);	
 }
