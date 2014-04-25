@@ -40,7 +40,9 @@ function Update () {
 		} else {
 			this.WanderFunction();
 		}
-		timer = 70;
+		if(currentState != ScentReaveState.Follow) {
+			timer = 70;
+		}
 	} else {
 		timer--;
 	}
@@ -51,15 +53,18 @@ function AttackFunction() {
 }
 
 function FollowFunction() {
-	Debug.Log("nextIndex is " + nextIndex);
-	agent.transform.position = scentTrail[nextIndex].transform.position;
-	agent.transform.rotation = scentTrail[nextIndex].transform.rotation;
-	if(nextIndex >= maxScentTrailLength) {
+	/**if(scentTrail[nextIndex] == null) {
+		Debug.Log("null object is detected");
+	}*/
+	if((scentTrail[nextIndex] == null) || (nextIndex >= (maxScentTrailLength - 1))) {
 		nextIndex = 0;
 	} else {
 		nextIndex++;
 	}
-	timer = 10;
+	Debug.Log("nextIndex is " + nextIndex);
+	agent.transform.position = scentTrail[nextIndex].transform.position;
+	agent.transform.rotation = scentTrail[nextIndex].transform.rotation;
+	timer = 0;
 }
 
 function WanderFunction() {
@@ -109,6 +114,8 @@ function OnTriggerEnter(other : Collider) {
 		var tempScript : ScentNodeScript = other.gameObject.GetComponent("ScentNodeScript");
 		Debug.Log("triggered ScentNode with index " + tempScript.GetIndex());
 		nextIndex = tempScript.GetIndex();
+		agent.transform.position = scentTrail[nextIndex].transform.position;
+		agent.transform.rotation = scentTrail[nextIndex].transform.rotation;
 	} else if(other.gameObject.tag == "Player") {
 		Debug.Log("damaging the player.");
 		//ayerHealth.DamagePlayer(10.0);
