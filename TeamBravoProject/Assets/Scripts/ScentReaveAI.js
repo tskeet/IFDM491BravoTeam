@@ -8,9 +8,6 @@ private var timer : int;
 public var currentState : ScentReaveState;
 private var previousPlayerLocation : Vector3;
 
-<<<<<<< HEAD
-//private var scentTrail : ScentNode[];
-=======
 
 public var scentNodeCopy : GameObject; //a reference to the scent nodes that the GameObject.Instantiate method will use to create new scent nodes
 //public var scentTrail : Array;
@@ -19,14 +16,11 @@ public var maxScentTrailLength : int; //maximum length of scent trail
 public var scentIndex : int; //keeps track of current index in scentTrail
 
 public var nextIndex : int;
->>>>>>> 039393b7ee5b027da4536f34d4deb4ca5a417cb4
 
 enum ScentReaveState {Follow, Wander, Attack};
 
 function Start () {
 	//scentTrail = new Array();
-<<<<<<< HEAD
-=======
 	agent = GetComponent.<NavMeshAgent>();
 	timer = 70;
 	currentState = ScentReaveState.Wander;
@@ -34,7 +28,6 @@ function Start () {
 	scentTrail = new GameObject[maxScentTrailLength];
 	
 	nextIndex = -1;
->>>>>>> 039393b7ee5b027da4536f34d4deb4ca5a417cb4
 }
 
 function Update () {
