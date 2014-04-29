@@ -1,21 +1,13 @@
 while (1)
 {	
-<<<<<<< HEAD
 	if (`filetest -r "Z:/MDS/IFDM49~1/TEAMBR~1/Temp/CommandPipe"`)
-=======
-	if (`filetest -r "Z:/IFDM49~1/TEAMBR~1/Temp/CommandPipe"`)
->>>>>>> 039393b7ee5b027da4536f34d4deb4ca5a417cb4
 	{
 		$exportNormals = 0;
 		$exportTangents = 0;
 		$bakeCommand = "";
 	
 		// Parse settings
-<<<<<<< HEAD
 		$waitpipe = `fopen "Z:/MDS/IFDM49~1/TEAMBR~1/Temp/CommandPipe" "r"`;
-=======
-		$waitpipe = `fopen "Z:/IFDM49~1/TEAMBR~1/Temp/CommandPipe" "r"`;
->>>>>>> 039393b7ee5b027da4536f34d4deb4ca5a417cb4
 		$filename = `fgetline $waitpipe`;
 		
 		for ($i = 0; $i < 3; ++$i) 
@@ -144,26 +136,16 @@ while (1)
 				FBXExportShowUI -v false;
 
 				print "Before fbx export\n";
-<<<<<<< HEAD
 				FBXExport -f "Z:/MDS/IFDM49~1/TEAMBR~1/Temp/ExportedFBXFile.fbx";
-=======
-				FBXExport -f "Z:/IFDM49~1/TEAMBR~1/Temp/ExportedFBXFile.fbx";
->>>>>>> 039393b7ee5b027da4536f34d4deb4ca5a417cb4
 				print "after fbx export\n";
 			}
 			else
 				print "Could not open Maya file.";
 
 			// TODO: We should use sysFile, so we don't have to have two separate mel scripts for OSX/Windows
-<<<<<<< HEAD
 			system ("del \"Z:\\MDS\\IFDM49~1\\TEAMBR~1\\Temp\\CommandPipe\"");
 
 			$donepipe = `fopen "Z:/MDS/IFDM49~1/TEAMBR~1/Temp/SyncPipe" "w"`;
-=======
-			system ("del \"Z:\\IFDM49~1\\TEAMBR~1\\Temp\\CommandPipe\"");
-
-			$donepipe = `fopen "Z:/IFDM49~1/TEAMBR~1/Temp/SyncPipe" "w"`;
->>>>>>> 039393b7ee5b027da4536f34d4deb4ca5a417cb4
 			fwrite $donepipe "Done";
 			fclose $donepipe;
 			print "Finished maya loading and fbx conversion \n";
