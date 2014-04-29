@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: cefe4bcf497ccd340a50cbeb69f5df4c
 ModelImporter:
+<<<<<<< HEAD
   serializedVersion: 16
+=======
+  serializedVersion: 15
+>>>>>>> 039393b7ee5b027da4536f34d4deb4ca5a417cb4
   fileIDToRecycleName:
     100000: //RootNode
     100002: polySurface1
@@ -15,9 +19,14 @@ ModelImporter:
     3300002: polySurface2
     4300000: polySurface1
     4300002: polySurface2
+<<<<<<< HEAD
     7400000: Regular Spin
     9500000: //RootNode
     11100000: //RootNode
+=======
+    7400000: Take 001
+    9500000: //RootNode
+>>>>>>> 039393b7ee5b027da4536f34d4deb4ca5a417cb4
   materials:
     importMaterials: 1
     materialName: 0
@@ -32,6 +41,7 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+<<<<<<< HEAD
     clipAnimations:
     - serializedVersion: 16
       name: Regular Spin
@@ -65,6 +75,9 @@ ModelImporter:
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
+=======
+    clipAnimations: []
+>>>>>>> 039393b7ee5b027da4536f34d4deb4ca5a417cb4
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -100,6 +113,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+<<<<<<< HEAD
   animationType: 1
   additionalBone: 0
+=======
+  animationType: 2
+>>>>>>> 039393b7ee5b027da4536f34d4deb4ca5a417cb4
   userData: 

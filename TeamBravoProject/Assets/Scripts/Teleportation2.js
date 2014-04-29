@@ -28,6 +28,7 @@ function Update () {
 	var horizontal_d = Input.GetAxis("Horizontal_D");
 	var vertical_d = Input.GetAxis("Vertical_D");
 	if((isDPadPressed == 0) && ((horizontal_d != 0) || (vertical_d != 0))) {
+		Debug.Log("directional pad was pressed.");
 		isDPadPressed = 1;
 		if((horizontal_d > 0) && (vertical_d == 0)) { //east
 			currentUniverse = 1;
