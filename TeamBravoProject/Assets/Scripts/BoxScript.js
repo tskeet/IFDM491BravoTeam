@@ -5,10 +5,14 @@ private var anotification : GUIText;
 public var boxController : BoxController;
 public var takeOutNotification : GUIText;
 public var putInNotification : GUIText;
+
+//variables used for animation
+var anim : Animation;
+
 function Start () {
 
 	anotification = new GUIText();
-
+	anim = GetComponent.<Animation>();
 }
 
 function Update () {
@@ -27,6 +31,7 @@ function Update () {
 }
 
 function OnTriggerEnter(other : Collider) {
+	anim.Play("Open");
 	//Debug.Log("collided with box");
 	if(other.CompareTag("Player")) {
 		//anotification = new GameObject();
@@ -45,9 +50,18 @@ function OnTriggerEnter(other : Collider) {
 }
 
 function OnTriggerExit(other : Collider) {
+	anim.Play("Close");
 	if(other.CompareTag("Player")) {
 		Destroy(anotification.gameObject);
 		//anotification.enabled = false;
 		boxController.nearBox = false;
 	}
+}
+
+function CloseBox() {
+	anim.Play("Open");
+}
+
+function OpenBox() {
+	anim.Play("Close");
 }

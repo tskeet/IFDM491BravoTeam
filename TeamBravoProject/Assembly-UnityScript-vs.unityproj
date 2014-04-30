@@ -61,10 +61,12 @@
      <Compile Include="Assets\Scripts\Teleportation2.js" />
      <Compile Include="Assets\Scripts\TeleportationScript.js" />
      <Compile Include="Assets\Scripts\WeaponScript.js" />
+     <Compile Include="Assets\Textures\Scripts\CharacterMotor.js" />
+     <Compile Include="Assets\Textures\Scripts\FPSInputController.js" />
+     <Compile Include="Assets\Textures\Scripts\PlatformInputController.js" />
+     <Compile Include="Assets\Textures\Scripts\ThirdPersonCamera.js" />
+     <Compile Include="Assets\Textures\Scripts\ThirdPersonController.js" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
- <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">

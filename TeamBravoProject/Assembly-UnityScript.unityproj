@@ -61,13 +61,16 @@
      <Compile Include="Assets\Scripts\Teleportation2.js" />
      <Compile Include="Assets\Scripts\TeleportationScript.js" />
      <Compile Include="Assets\Scripts\WeaponScript.js" />
+     <Compile Include="Assets\Textures\Scripts\CharacterMotor.js" />
+     <Compile Include="Assets\Textures\Scripts\FPSInputController.js" />
+     <Compile Include="Assets\Textures\Scripts\PlatformInputController.js" />
+     <Compile Include="Assets\Textures\Scripts\ThirdPersonCamera.js" />
+     <Compile Include="Assets\Textures\Scripts\ThirdPersonController.js" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{AF7CAD97-8392-843B-0738-90A209F428B0}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{3FE463D8-9C9B-DDDD-AC07-2F8CDA404DE0}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
