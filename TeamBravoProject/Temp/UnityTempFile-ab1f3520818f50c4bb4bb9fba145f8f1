@@ -4,7 +4,6 @@
 -out:Temp/Assembly-CSharp.dll
 -r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll"
 -r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
--r:Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll
 -r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
 -define:UNITY_STANDALONE_WIN
 -define:ENABLE_MICROPHONE
@@ -39,5 +38,6 @@
 -define:UNITY_EDITOR
 -define:UNITY_EDITOR_WIN
 Assets/Scripts/BlackHoleProjectileScript.cs
+Assets/Textures/Scripts/MouseLook.cs
 -r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Runtime.Serialization.dll"
 -r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Xml.Linq.dll"

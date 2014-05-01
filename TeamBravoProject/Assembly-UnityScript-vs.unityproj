@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\RampScript.js" />
      <Compile Include="Assets\Scripts\BoxController.js" />
      <Compile Include="Assets\Scripts\BoxScript.js" />
      <Compile Include="Assets\Scripts\EchoLocatable.js" />

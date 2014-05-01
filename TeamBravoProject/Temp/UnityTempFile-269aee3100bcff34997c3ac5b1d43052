@@ -44,6 +44,5 @@ Assets/Plugins/FMOD/FMOD_StudioSystem.cs
 Assets/Plugins/FMOD/Wrapper/fmod.cs
 Assets/Plugins/FMOD/Wrapper/fmod_errors.cs
 Assets/Plugins/FMOD/Wrapper/fmod_studio.cs
-"Assets/Standard Assets/Character Controllers/Sources/Scripts/MouseLook.cs"
 -r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Runtime.Serialization.dll"
 -r:"C:/Program Files (x86)/Unity/Editor/Data/Mono\lib/mono/unity\System.Xml.Linq.dll"

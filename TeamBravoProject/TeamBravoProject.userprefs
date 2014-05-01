@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BoxScript.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\RampScript.js">
     <Files>
-      <File FileName="Assets\Scripts\BoxScript.js" Line="68" Column="1" />
+      <File FileName="Assets\RampScript.js" Line="27" Column="28" />
+      <File FileName="Assets\Textures\Scripts\CharacterMotor.js" Line="11" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
