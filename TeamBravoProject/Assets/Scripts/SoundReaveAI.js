@@ -17,11 +17,14 @@ enum SoundReaveState{EchoLocate, EchoFound, Attack, Wander, Stun};
 function Start () {
 	timer = 70;
 	//Debug.Log("DeltaTime is " + Time.deltaTime);
-	agent = GetComponent.<NavMeshAgent>();
+	//agent = GetComponent.<NavMeshAgent>();
+	agent = GetComponent(NavMeshAgent);
 	currentState = SoundReaveState.Wander;
 }
 
 function Update () {
+	Debug.Log("agent's position is " + agent.transform.position);
+	Debug.Log("agent's destination is " + agent.destination);
 	if(timer <= 0) {
 		if(currentState == SoundReaveState.Attack) {
 			this.AttackFunction();
@@ -40,7 +43,7 @@ function Update () {
 }
 
 function EchoLocationFunction() {
-	Debug.Log("inside EchoLocation Fuction");
+	//Debug.Log("inside EchoLocation Fuction");
 	//getting vector between the Sound Reave and the Player's position.
 	var heading = target.position - transform.position;
 	
@@ -66,7 +69,7 @@ function EchoLocationFunction() {
 }
 
 function EchoFoundFunction() {
-	agent.speed = 25.0;
+	agent.speed = 1000.0;
 	agent.SetDestination(lastKnownPosition.transform.position);
 }
 
@@ -75,14 +78,18 @@ function AttackFunction() {
 }
 
 function WanderFunction() {
-	//Debug.Log("in Wander Function");
+	Debug.Log("in Wander Function");
 	//agent.Move(new Vector3(Random.value, Random.value, Random.value));
-	var randomVector = Random.insideUnitCircle * 5;
-	//Debug.Log("randomVector = " + randomVector);
+	var randomVector = Random.insideUnitCircle * 100;
+	
+	Debug.Log("randomVector = " + randomVector);
 	//randomVector.y = 0.0;
-	agent.speed = 5.0;
-	agent.SetDestination((new Vector3(randomVector.x, 0.0, randomVector.y)) + agent.transform.position);
-	currentState = SoundReaveState.EchoLocate;
+	agent.speed = 50.0;
+	//agent.SetDestination((new Vector3(randomVector.x, 0.0, randomVector.y)) + agent.transform.position);
+	//agent.destination = new Vector3(randomVector.x + agent.transform.position.x, agent.transform.position.y , randomVector.y + agent.transform.position.z);
+	//agent.destination = Vector3(agent.transform.position.x + 1000, agent.transform.position.y, agent.transform.position.z + 1000);
+	agent.SetDestination(new Vector3(agent.transform.position.x + 1000, agent.transform.position.y, agent.transform.position.z + 1000));
+	//currentState = SoundReaveState.EchoLocate;
 }
 
 function OnTriggerEnter(other : Collider) {

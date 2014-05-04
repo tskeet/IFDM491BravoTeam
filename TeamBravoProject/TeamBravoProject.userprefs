@@ -1,10 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BoxScript.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SoundReaveAI.js">
     <Files>
-      <File FileName="Assets\Scripts\BoxScript.js" Line="9" Column="31" />
+      <File FileName="Assets\Scripts\SoundReaveAI.js" Line="85" Column="46" />
+      <File FileName="Assets\Scripts\BoxScript.js" Line="1" Column="1" />
       <File FileName="Assets\Textures\Scripts\CharacterMotor.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BoxController.js" Line="17" Column="39" />
+      <File FileName="Assets\Scripts\BoxController.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
