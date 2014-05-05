@@ -23,8 +23,6 @@ function Start () {
 }
 
 function Update () {
-	Debug.Log("agent's position is " + agent.transform.position);
-	Debug.Log("agent's destination is " + agent.destination);
 	if(timer <= 0) {
 		if(currentState == SoundReaveState.Attack) {
 			this.AttackFunction();
@@ -70,7 +68,9 @@ function EchoLocationFunction() {
 
 function EchoFoundFunction() {
 	agent.speed = 1000.0;
-	agent.SetDestination(lastKnownPosition.transform.position);
+	//agent.SetDestination(lastKnownPosition.transform.position);
+	var position : Vector3 = lastKnownPosition.transform.position;
+	agent.SetDestination(Vector3(position.x, position.y - 19.22287, position.z));
 }
 
 function AttackFunction() {
@@ -82,14 +82,12 @@ function WanderFunction() {
 	//agent.Move(new Vector3(Random.value, Random.value, Random.value));
 	var randomVector = Random.insideUnitCircle * 100;
 	
-	Debug.Log("randomVector = " + randomVector);
+	//Debug.Log("randomVector = " + randomVector);
 	//randomVector.y = 0.0;
 	agent.speed = 50.0;
-	//agent.SetDestination((new Vector3(randomVector.x, 0.0, randomVector.y)) + agent.transform.position);
-	//agent.destination = new Vector3(randomVector.x + agent.transform.position.x, agent.transform.position.y , randomVector.y + agent.transform.position.z);
-	//agent.destination = Vector3(agent.transform.position.x + 1000, agent.transform.position.y, agent.transform.position.z + 1000);
-	agent.SetDestination(new Vector3(agent.transform.position.x + 1000, agent.transform.position.y, agent.transform.position.z + 1000));
-	//currentState = SoundReaveState.EchoLocate;
+	agent.SetDestination((new Vector3(randomVector.x, -19.22287, randomVector.y)) + agent.transform.position);
+	
+	this.currentState = SoundReaveState.EchoLocate;
 }
 
 function OnTriggerEnter(other : Collider) {

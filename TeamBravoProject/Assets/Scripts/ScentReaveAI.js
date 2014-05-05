@@ -68,9 +68,9 @@ function FollowFunction() {
 }
 
 function WanderFunction() {
-	var randomVector = Random.insideUnitCircle * 5;
-	agent.speed = 5.0;
-	agent.SetDestination((new Vector3(randomVector.x, 0.0, randomVector.y)) + agent.transform.position);
+	var randomVector = Random.insideUnitCircle * 20;
+	agent.speed = 50;
+	agent.SetDestination((new Vector3(randomVector.x, -19.22287, randomVector.y)) + agent.transform.position);
 }
 
 /**function AddToScentTrail() {
@@ -87,7 +87,7 @@ function WanderFunction() {
 }*/
 
 function AddToScentTrail() {
-	if(Vector3.Distance(previousPlayerLocation, target.position) > 1.0) {
+	if(Vector3.Distance(previousPlayerLocation, target.position) > 15.0) {
 		var newScentNode : GameObject = GameObject.Instantiate(scentNodeCopy, target.position, target.rotation);  
 		if(scentIndex >= maxScentTrailLength) {
 			scentIndex = 0;
@@ -119,5 +119,12 @@ function OnTriggerEnter(other : Collider) {
 	} else if(other.gameObject.tag == "Player") {
 		Debug.Log("damaging the player.");
 		//ayerHealth.DamagePlayer(10.0);
+	}
+}
+
+function ClearScentTrail() {
+	var i : int;
+	for(i = 0; i < maxScentTrailLength; i++) {
+		GameObject.Destroy(scentTrail[i]);
 	}
 }
