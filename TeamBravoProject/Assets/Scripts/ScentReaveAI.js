@@ -56,15 +56,21 @@ function FollowFunction() {
 	/**if(scentTrail[nextIndex] == null) {
 		Debug.Log("null object is detected");
 	}*/
-	if((scentTrail[nextIndex] == null) || (nextIndex >= (maxScentTrailLength - 1))) {
-		nextIndex = 0;
+	Debug.Log("nextIndex = " + nextIndex + " scentIndex = " + scentIndex);
+	if((nextIndex + 1) == scentIndex) {
+		currentState = ScentReaveState.Attack;
 	} else {
-		nextIndex++;
+		if((scentTrail[nextIndex] == null) || ((nextIndex + 1) >= maxScentTrailLength)) {
+			nextIndex = 0;
+		} else {
+			nextIndex++;
+		}
+		///Debug.Log("nextIndex is " + nextIndex);
+
+		agent.transform.position = scentTrail[nextIndex].transform.position;
+		agent.transform.rotation = scentTrail[nextIndex].transform.rotation;
+		timer = 0;
 	}
-	Debug.Log("nextIndex is " + nextIndex);
-	agent.transform.position = scentTrail[nextIndex].transform.position;
-	agent.transform.rotation = scentTrail[nextIndex].transform.rotation;
-	timer = 0;
 }
 
 function WanderFunction() {
@@ -108,11 +114,11 @@ function AddToScentTrail() {
 }
 
 function OnTriggerEnter(other : Collider) {
-	if(other.CompareTag("ScentNode") && (nextIndex < 0)) {
+	if(other.CompareTag("ScentNode") && (nextIndex < 0) && (currentState == ScentReaveState.Wander)) {
 		agent.Stop(true);
 		currentState = ScentReaveState.Follow;
 		var tempScript : ScentNodeScript = other.gameObject.GetComponent("ScentNodeScript");
-		Debug.Log("triggered ScentNode with index " + tempScript.GetIndex());
+		//Debug.Log("triggered ScentNode with index " + tempScript.GetIndex());
 		nextIndex = tempScript.GetIndex();
 		agent.transform.position = scentTrail[nextIndex].transform.position;
 		agent.transform.rotation = scentTrail[nextIndex].transform.rotation;

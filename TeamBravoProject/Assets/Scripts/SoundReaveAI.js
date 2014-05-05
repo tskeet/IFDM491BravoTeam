@@ -41,7 +41,7 @@ function Update () {
 }
 
 function EchoLocationFunction() {
-	//Debug.Log("inside EchoLocation Fuction");
+	Debug.Log("inside EchoLocation Fuction");
 	//getting vector between the Sound Reave and the Player's position.
 	var heading = target.position - transform.position;
 	
@@ -78,7 +78,7 @@ function AttackFunction() {
 }
 
 function WanderFunction() {
-	Debug.Log("in Wander Function");
+	//Debug.Log("in Wander Function");
 	//agent.Move(new Vector3(Random.value, Random.value, Random.value));
 	var randomVector = Random.insideUnitCircle * 100;
 	
