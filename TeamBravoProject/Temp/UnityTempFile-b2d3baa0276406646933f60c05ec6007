@@ -56,11 +56,11 @@ Assets/Scripts/HealthScript.js
 Assets/Scripts/MultiBrainReaveAI.js
 Assets/Scripts/NeuronBranchScript.js
 Assets/Scripts/ScentNodeScript.js
+Assets/Scripts/ScentReaveAI.js
 Assets/Scripts/SoundReaveAI.js
 Assets/Scripts/Teleportation2.js
-Assets/Scripts/TeleportationScript.js
 Assets/Scripts/WeaponScript.js
-Assets/Scripts/whatever/ScentReaveAI.js
+Assets/Scripts/old.js
 Assets/Textures/Scripts/CharacterMotor.js
 Assets/Textures/Scripts/FPSInputController.js
 Assets/Textures/Scripts/PlatformInputController.js

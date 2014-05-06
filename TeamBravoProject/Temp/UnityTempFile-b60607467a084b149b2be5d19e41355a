@@ -45,6 +45,7 @@
 -r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
 -i:UnityEditor
 Assets/RampScript.js
+Assets/Scripts/0.js
 Assets/Scripts/BoxController.js
 Assets/Scripts/BoxScript.js
 Assets/Scripts/EchoLocatable.js
@@ -59,7 +60,6 @@ Assets/Scripts/ScentNodeScript.js
 Assets/Scripts/ScentReaveAI.js
 Assets/Scripts/SoundReaveAI.js
 Assets/Scripts/Teleportation2.js
-Assets/Scripts/TeleportationScript.js
 Assets/Scripts/WeaponScript.js
 Assets/Textures/Scripts/CharacterMotor.js
 Assets/Textures/Scripts/FPSInputController.js

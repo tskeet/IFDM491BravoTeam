@@ -52,10 +52,10 @@ function AttackFunction() {
 
 }
 
-function FollowFunction() {
-	/**if(scentTrail[nextIndex] == null) {
+/*function FollowFunction() {
+	if(scentTrail[nextIndex] == null) {
 		Debug.Log("null object is detected");
-	}*/
+	}
 	Debug.Log("nextIndex = " + nextIndex + " scentIndex = " + scentIndex);
 	if((nextIndex + 1) == scentIndex) {
 		currentState = ScentReaveState.Attack;
@@ -71,6 +71,33 @@ function FollowFunction() {
 		agent.transform.rotation = scentTrail[nextIndex].transform.rotation;
 		timer = 0;
 	}
+}*/
+
+function FollowFunction() {
+	//Debug.Log("remainingDistance = " + agent.remainingDistance);
+	if(agent.remainingDistance < 15.0) {
+		Debug.Log("made it to here");
+		agent.Stop(true);
+		if(scentTrail[nextIndex] == null) {
+			Debug.Log("null object is detected");
+		}
+		if((nextIndex + 1) == scentIndex) {
+			currentState = ScentReaveState.Attack;
+		} else {
+			if((scentTrail[nextIndex] == null) || ((nextIndex + 1) >= maxScentTrailLength)) {
+				nextIndex = 0;
+			} else {
+				nextIndex++;
+			}
+			
+			agent.speed = 100.0;
+			var raycast : RaycastHit;
+			Physics.Raycast(scentTrail[nextIndex].transform.position, -Vector3.up, raycast);
+			agent.SetDestination(raycast.point);
+			//timer = 0;
+		}
+	}
+	timer = 0;
 }
 
 function WanderFunction() {

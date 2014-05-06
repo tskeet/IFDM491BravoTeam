@@ -41,7 +41,7 @@ function Update () {
 }
 
 function EchoLocationFunction() {
-	Debug.Log("inside EchoLocation Fuction");
+	//Debug.Log("inside EchoLocation Fuction");
 	//getting vector between the Sound Reave and the Player's position.
 	var heading = target.position - transform.position;
 	
