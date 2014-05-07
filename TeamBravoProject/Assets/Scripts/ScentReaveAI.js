@@ -89,7 +89,7 @@ function FollowFunction() {
 			} else {
 				nextIndex++;
 			}
-			
+			agent.acceleration = 1000.0;
 			agent.speed = 100.0;
 			var raycast : RaycastHit;
 			Physics.Raycast(scentTrail[nextIndex].transform.position, -Vector3.up, raycast);
@@ -147,8 +147,11 @@ function OnTriggerEnter(other : Collider) {
 		var tempScript : ScentNodeScript = other.gameObject.GetComponent("ScentNodeScript");
 		//Debug.Log("triggered ScentNode with index " + tempScript.GetIndex());
 		nextIndex = tempScript.GetIndex();
-		agent.transform.position = scentTrail[nextIndex].transform.position;
-		agent.transform.rotation = scentTrail[nextIndex].transform.rotation;
+		//agent.transform.position = scentTrail[nextIndex].transform.position;
+		//agent.transform.rotation = scentTrail[nextIndex].transform.rotation;
+		var raycast : RaycastHit;
+		Physics.Raycast(scentTrail[nextIndex].transform.position, -Vector3.up, raycast);
+		agent.SetDestination(raycast.point);
 	} else if(other.gameObject.tag == "Player") {
 		Debug.Log("damaging the player.");
 		//ayerHealth.DamagePlayer(10.0);

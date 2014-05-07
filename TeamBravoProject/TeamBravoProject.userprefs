@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ScentReaveAI.js">
     <Files>
-      <File FileName="Assets\Scripts\ScentReaveAI.js" Line="116" Column="1" />
-      <File FileName="Assets\Scripts\SoundReaveAI.js" Line="53" Column="2" />
+      <File FileName="Assets\Scripts\ScentReaveAI.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ScentReaveAI.js" Line="166" Column="2" />
+      <File FileName="Assets\Scripts\SoundReaveAI.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ScentNodeScript.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
