@@ -120,6 +120,7 @@ function WanderFunction() {
 }*/
 
 function AddToScentTrail() {
+	Debug.Log("adding node as " + gameObject.name);
 	if(Vector3.Distance(previousPlayerLocation, target.position) > 15.0) {
 		var newScentNode : GameObject = GameObject.Instantiate(scentNodeCopy, target.position, target.rotation);  
 		if(scentIndex >= maxScentTrailLength) {
@@ -156,6 +157,12 @@ function OnTriggerEnter(other : Collider) {
 		Debug.Log("damaging the player.");
 		//ayerHealth.DamagePlayer(10.0);
 	}
+}
+
+function PrepareDeactivation() {
+	currentState = ScentReaveState.Wander;
+	nextIndex = -1;
+	this.ClearScentTrail();
 }
 
 function ClearScentTrail() {

@@ -21,6 +21,8 @@ function OnTriggerEnter(other : Collider) {
 function OnTriggerExit(other : Collider) {
 	if(other.CompareTag("Player")) {
 		Debug.Log("exited the enemycontroller");
+		var script : ScentReaveAI = scentReave.GetComponent(ScentReaveAI);
+		script.PrepareDeactivation();
 		scentReave.SetActive(false);
 	}
 }

@@ -22,6 +22,11 @@ ModelImporter:
     100032: topFloor_floor_White
     100034: topFloor_floor_Yellow
     100036: topFloor_Roof_Blue
+    100038: ScentBoundary_1
+    100040: ScentBoundary_2
+    100042: ScentBoundary_3
+    100044: scentBoundary_4
+    100046: ScentBoundary_5
     400000: bottom_labBlack
     400002: bottom_labBlue
     400004: bottom_labFloor
@@ -41,6 +46,11 @@ ModelImporter:
     400032: topFloor_floor_White
     400034: topFloor_floor_Yellow
     400036: topFloor_Roof_Blue
+    400038: ScentBoundary_1
+    400040: ScentBoundary_2
+    400042: ScentBoundary_3
+    400044: scentBoundary_4
+    400046: ScentBoundary_5
     2300000: bottom_labBlack
     2300002: bottom_labBlue
     2300004: bottom_labFloor
@@ -59,6 +69,11 @@ ModelImporter:
     2300030: topFloor_floor_White
     2300032: topFloor_floor_Yellow
     2300034: topFloor_Roof_Blue
+    2300036: ScentBoundary_1
+    2300038: ScentBoundary_2
+    2300040: ScentBoundary_3
+    2300042: scentBoundary_4
+    2300044: ScentBoundary_5
     3300000: bottom_labBlack
     3300002: bottom_labBlue
     3300004: bottom_labFloor
@@ -77,6 +92,11 @@ ModelImporter:
     3300030: topFloor_floor_White
     3300032: topFloor_floor_Yellow
     3300034: topFloor_Roof_Blue
+    3300036: ScentBoundary_1
+    3300038: ScentBoundary_2
+    3300040: ScentBoundary_3
+    3300042: scentBoundary_4
+    3300044: ScentBoundary_5
     4300000: bottom_labFloor
     4300002: top_labRoof
     4300004: bottom_labBlack
@@ -95,6 +115,11 @@ ModelImporter:
     4300030: bottomFloor_Roof_Yellow
     4300032: top_labYellow
     4300034: topFloor_floor_Yellow
+    4300036: ScentBoundary_1
+    4300038: ScentBoundary_2
+    4300040: scentBoundary_4
+    4300042: ScentBoundary_3
+    4300044: ScentBoundary_5
     9500000: //RootNode
   materials:
     importMaterials: 1
