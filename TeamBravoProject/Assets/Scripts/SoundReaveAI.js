@@ -33,7 +33,6 @@ function Update () {
 		} else {
 			this.WanderFunction();
 		}
-		timer = 70;
 	} else {
 		timer--;
 	}
@@ -60,17 +59,23 @@ function EchoLocationFunction() {
 			
 			lastKnownPosition = GameObject.Instantiate(lastKnownPositionObject, hitObject.transform.position, hitObject.transform.rotation);
 			currentState = SoundReaveState.EchoFound;
+			timer = 0;
 		} else {
 			currentState = SoundReaveState.Wander;
+			timer = 0;
 		}
 	}
 }
 
 function EchoFoundFunction() {
+	agent.acceleration = 1000.0;
 	agent.speed = 1000.0;
+	agent.angularSpeed = 100.0;
 	//agent.SetDestination(lastKnownPosition.transform.position);
-	var position : Vector3 = lastKnownPosition.transform.position;
-	agent.SetDestination(Vector3(position.x, position.y - 19.22287, position.z));
+	//var position : Vector3 = lastKnownPosition.transform.position;
+	var raycast : RaycastHit;
+	Physics.Raycast(lastKnownPosition.transform.position, -Vector3.up, raycast);
+	agent.SetDestination(raycast.point);
 }
 
 function AttackFunction() {
@@ -85,9 +90,13 @@ function WanderFunction() {
 	//Debug.Log("randomVector = " + randomVector);
 	//randomVector.y = 0.0;
 	agent.speed = 50.0;
-	agent.SetDestination((new Vector3(randomVector.x, -19.22287, randomVector.y)) + agent.transform.position);
 	
+	var raycast : RaycastHit;
+	Physics.Raycast(Vector3(randomVector.x + transform.position.x, transform.position.y, randomVector.y + transform.position.z), -Vector3.up, raycast);
+	agent.SetDestination(raycast.point);
+
 	this.currentState = SoundReaveState.EchoLocate;
+	this.timer = 70;
 }
 
 function OnTriggerEnter(other : Collider) {

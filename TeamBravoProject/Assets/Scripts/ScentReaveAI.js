@@ -103,7 +103,10 @@ function FollowFunction() {
 function WanderFunction() {
 	var randomVector = Random.insideUnitCircle * 20;
 	agent.speed = 50;
-	agent.SetDestination((new Vector3(randomVector.x, -19.22287, randomVector.y)) + agent.transform.position);
+	//agent.SetDestination((new Vector3(randomVector.x, -19.22287, randomVector.y)) + agent.transform.position);
+	var raycast : RaycastHit;
+	Physics.Raycast(Vector3(randomVector.x + transform.position.x, transform.position.y, randomVector.y + transform.position.z), -Vector3.up, raycast);
+	agent.SetDestination(raycast.point);
 }
 
 /**function AddToScentTrail() {
