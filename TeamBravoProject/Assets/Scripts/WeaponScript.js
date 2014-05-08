@@ -18,7 +18,6 @@ static var OriginalOn  = true;
 
 public var gunAnimation : Animation;
 
-
 function Start () {
 	currentTrigger = false;
 	gunAnimation = GetComponent.<Animation>();
