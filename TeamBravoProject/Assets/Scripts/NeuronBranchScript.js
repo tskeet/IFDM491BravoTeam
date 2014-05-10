@@ -13,6 +13,6 @@ function Update () {
 
 function OnTriggerEnter(other : Collider) {
 	if(other.CompareTag("Player")) {
-		multiBrainReave.Notify(neuron.position);
+		multiBrainReave.Notify();
 	}
 }

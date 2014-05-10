@@ -17,7 +17,9 @@ public var scentIndex : int; //keeps track of current index in scentTrail
 
 public var nextIndex : int;
 
-enum ScentReaveState {Follow, Wander, Attack};
+public var stunTimer : int;
+
+enum ScentReaveState {Follow, Wander, Attack, Stun};
 
 function Start () {
 	//scentTrail = new Array();
@@ -26,8 +28,10 @@ function Start () {
 	currentState = ScentReaveState.Wander;
 	previousPlayerLocation = target.position;
 	scentTrail = new GameObject[maxScentTrailLength];
+	animation["Take 001"].speed = 2.0;
 	
 	nextIndex = -1;
+	stunTimer = -1;
 }
 
 function Update () {
@@ -37,14 +41,37 @@ function Update () {
 			this.AttackFunction();
 		} else if(currentState == ScentReaveState.Follow) {
 			this.FollowFunction();
+		} else if(currentState == ScentReaveState.Stun){
+			this.StunFunction();
 		} else {
 			this.WanderFunction();
 		}
-		if(currentState != ScentReaveState.Follow) {
+		/*if(currentState != ScentReaveState.Follow) {
 			timer = 70;
-		}
+		}*/
 	} else {
 		timer--;
+	}
+}
+
+function StunFunction() {
+	//Debug.Log("entered scent Reave StunFunction");
+	if(stunTimer < 0) {
+		agent.Stop(true);
+		var ani : Animation = gameObject.animation;
+		ani["Take 001"].speed = 0.0;
+		currentState = ScentReaveState.Stun;
+		stunTimer = 350;
+		timer = 0;
+	} else if(stunTimer > 0) {
+		stunTimer--;
+	} else {
+		gameObject.animation["Take 001"].speed = 2.0;
+		currentState = ScentReaveState.Wander;
+		stunTimer = -1;
+		nextIndex = -1;
+		//ClearScentTrail();
+		timer = 0;
 	}
 }
 
@@ -76,10 +103,10 @@ function AttackFunction() {
 function FollowFunction() {
 	//Debug.Log("remainingDistance = " + agent.remainingDistance);
 	if(agent.remainingDistance < 15.0) {
-		Debug.Log("made it to here");
+		//Debug.Log("made it to here");
 		agent.Stop(true);
 		if(scentTrail[nextIndex] == null) {
-			Debug.Log("null object is detected");
+			//Debug.Log("null object is detected");
 		}
 		if((nextIndex + 1) == scentIndex) {
 			currentState = ScentReaveState.Attack;
@@ -107,6 +134,7 @@ function WanderFunction() {
 	var raycast : RaycastHit;
 	Physics.Raycast(Vector3(randomVector.x + transform.position.x, transform.position.y, randomVector.y + transform.position.z), -Vector3.up, raycast);
 	agent.SetDestination(raycast.point);
+	timer = 70;
 }
 
 /**function AddToScentTrail() {
@@ -123,7 +151,7 @@ function WanderFunction() {
 }*/
 
 function AddToScentTrail() {
-	Debug.Log("adding node as " + gameObject.name);
+	//Debug.Log("adding node as " + gameObject.name);
 	if(Vector3.Distance(previousPlayerLocation, target.position) > 15.0) {
 		var newScentNode : GameObject = GameObject.Instantiate(scentNodeCopy, target.position, target.rotation);  
 		if(scentIndex >= maxScentTrailLength) {
@@ -157,13 +185,18 @@ function OnTriggerEnter(other : Collider) {
 		Physics.Raycast(scentTrail[nextIndex].transform.position, -Vector3.up, raycast);
 		agent.SetDestination(raycast.point);
 	} else if(other.gameObject.tag == "Player") {
-		Debug.Log("damaging the player.");
+		//Debug.Log("damaging the player.");
 		//ayerHealth.DamagePlayer(10.0);
+		var health : HealthScript = other.GetComponent(HealthScript);
+		health.DamagePlayer(10.0);
+		//currentState = ScentReaveState.Wander;
+		//nextIndex = -1;
 	}
 }
 
 function PrepareDeactivation() {
 	currentState = ScentReaveState.Wander;
+	agent.animation["Take 001"].speed = 2.0;
 	nextIndex = -1;
 	this.ClearScentTrail();
 }
