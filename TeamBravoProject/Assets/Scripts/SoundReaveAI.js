@@ -10,6 +10,7 @@ public var currentState : SoundReaveState;
 
 public var playerHealth : HealthScript;
 
+public var stunTimer : int;
 //public var localObjects : GameObject[];
 
 enum SoundReaveState{EchoLocate, EchoFound, Attack, Wander, Stun};
@@ -20,6 +21,8 @@ function Start () {
 	//agent = GetComponent.<NavMeshAgent>();
 	agent = GetComponent(NavMeshAgent);
 	currentState = SoundReaveState.Wander;
+	animation["Take 001"].speed = 2.0;
+	stunTimer = -1;
 }
 
 function Update () {
@@ -30,6 +33,8 @@ function Update () {
 			this.EchoLocationFunction();
 		} else if(currentState == SoundReaveState.EchoFound) {
 			this.EchoFoundFunction();
+		} else if(currentState == SoundReaveState.Stun) {
+			this.StunFunction();
 		} else {
 			this.WanderFunction();
 		}
@@ -59,6 +64,7 @@ function EchoLocationFunction() {
 			
 			lastKnownPosition = GameObject.Instantiate(lastKnownPositionObject, hitObject.transform.position, hitObject.transform.rotation);
 			currentState = SoundReaveState.EchoFound;
+			transform.LookAt(target.position);
 			timer = 0;
 		} else {
 			currentState = SoundReaveState.Wander;
@@ -80,6 +86,25 @@ function EchoFoundFunction() {
 
 function AttackFunction() {
 
+}
+
+function StunFunction() {
+
+	if(stunTimer < 0) {
+		agent.Stop(true);
+		var ani : Animation = gameObject.animation;
+		ani["Take 001"].speed = 0.0;
+		currentState = SoundReaveState.Stun;
+		stunTimer = 350;
+		timer = 0;
+	} else if(stunTimer > 0) {
+		stunTimer--;
+	} else {
+		gameObject.animation["Take 001"].speed = 2.0;
+		currentState = SoundReaveState.Wander;
+		stunTimer = -1;
+		timer = 0;
+	}
 }
 
 function WanderFunction() {
@@ -106,7 +131,7 @@ function OnTriggerEnter(other : Collider) {
 		agent.Stop(true);
 		currentState = SoundReaveState.EchoLocate;
 	} else if(other.gameObject.tag == "Player") {
-		Debug.Log("damaging the player.");
+		//Debug.Log("damaging the player.");
 		playerHealth.DamagePlayer(10.0);
 	}
 }

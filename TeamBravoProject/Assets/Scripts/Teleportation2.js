@@ -18,7 +18,7 @@ public var weapon : WeaponScript;
 public var currentUniverse : int; //an int to signify the current universe the player is in.
 //var weaponUniverse : int; //an int to signify which universe the weapon is in.
 
-public var mouseUniverse : int;
+//public var mouseUniverse : int;
 
 function Start () {
 	isDPadPressed = 0;
@@ -30,7 +30,7 @@ function Update () {
 	var horizontal_d = Input.GetAxis("Horizontal_D");
 	var vertical_d = Input.GetAxis("Vertical_D");
 	
-	if(Input.GetMouseButtonDown(1)) {
+/*	if(Input.GetMouseButtonDown(1)) {
 		if(mouseUniverse == 3) {
 			mouseUniverse = 0;
 		} else {
@@ -49,7 +49,7 @@ function Update () {
 			currentUniverse = 4;
 			ChangeUniverse(universeNorthOrigin);
 		}
-	}
+	}*/
 	
 	if((isDPadPressed == 0) && ((horizontal_d != 0) || (vertical_d != 0))) {
 		//Debug.Log("directional pad was pressed.");
