@@ -16,7 +16,7 @@ ModelImporter:
     400008: neuralStem_Joint
     400010: nueralHead_joint
     4300000: NeuralBranch_Low_Def
-    7400000: Take 001
+    7400000: Sway
     9500000: //RootNode
     13700000: NeuralBranch_Low_Def
   materials:
@@ -25,15 +25,53 @@ ModelImporter:
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
-    bakeSimulation: 0
+    bakeSimulation: 1
     optimizeGameObjects: 0
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
-    animationWrapMode: 0
+    animationWrapMode: 2
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Sway
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: NeuralBranch_Low_Def
+        weight: 1
+      - path: neuralRoot_joint
+        weight: 1
+      - path: neuralRoot_joint/neuralStem_Joint
+        weight: 1
+      - path: neuralRoot_joint/neuralStem_Joint/nueralHead_joint
+        weight: 1
+      - path: neuralRoot_joint/neuralStem_Joint/nueralHead_joint/neuralEnd_Joint
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -69,6 +107,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
